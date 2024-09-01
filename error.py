@@ -1,4 +1,5 @@
 class Error(Exception):
+    """Clase Base Excepciomes"""
     pass
         
 class DimensionError(Error):
@@ -12,7 +13,8 @@ class DimensionError(Error):
         else:
             msj = self.mensaje
             if self.dimension:
-                msj += self.dimension
+                msj += f" dimension: {self.dimension}"
+        
             if self.maximo:
-                msj += self.maximo
+                msj += f" dimension: {self.maximo}"
             return msj
